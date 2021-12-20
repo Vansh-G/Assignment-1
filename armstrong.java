@@ -7,17 +7,18 @@ class armstrong
         int n;
         int r;
         int temp;
-        int total=0;
+        double total=0;
         Scanner scan=new Scanner(System.in);
         n=scan.nextInt();
         System.out.println("Your number is "+ n);
+        int l=String.valueOf(n).length();
         r=n;
 
         while(r>0)
         {
 
             temp=r%10;
-            total=total+(temp*temp*temp);
+            total=total+Math.pow(temp,l);
             r=r/10;
 
         }
